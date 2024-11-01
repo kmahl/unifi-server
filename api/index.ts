@@ -13,7 +13,7 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 // app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-    return res.status().json({ success: true, "ok" });
+    return res.status().json({ success: true, message: "ok" });
 });
 
 app.listen(3000, () => console.log('Server ready on port 3000.'));
