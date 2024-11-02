@@ -1,0 +1,7 @@
+{
+    "watch": ["api"],
+    "ext": "js,json",
+    "ignore": ["node_modules"],
+    "exec": "node -r dotenv/config api/index.js"
+  }
+  
