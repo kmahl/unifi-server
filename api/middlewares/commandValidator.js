@@ -1,5 +1,5 @@
-const { errorResponse } = require('../utils/response.util');
-const { logger } = require('../server');
+const { errorResponse } = require('../utils/responseConstructor');
+const logger = require('../utils/logger');
 
 const commandList = ['authorize-guest', 'unauthorize-guest', 'block-sta', 'unblock-sta']
 

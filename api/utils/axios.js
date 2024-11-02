@@ -1,9 +1,9 @@
 const axios = require('axios');
 const { HttpCookieAgent, HttpsCookieAgent } = require('http-cookie-agent/http');
 const { CookieJar } = require('tough-cookie');
-const { logger } = require('../server')
+const logger = require('./logger');
 
-export const createAxiosInstance = () => {
+exports.createAxiosInstance = () => {
   const jar = new CookieJar();
   const instance = axios.create({
     baseURL: process.env.UNIFI_CONTROLLER_URL,

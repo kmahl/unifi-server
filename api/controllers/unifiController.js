@@ -1,7 +1,7 @@
 const { createAxiosInstance } = require('../utils/axios');
-const { successResponse, errorResponse } = require('../utils/response.util');
-const { logger } = require('../server');
-const { unifiController } = require('../services/unifi');
+const { successResponse, errorResponse } = require('../utils/responseConstructor');
+const logger = require('../utils/logger');
+const unifiController = require('../services/unifi');
 
 const authorize = async (req, res) => {
   try {
@@ -30,11 +30,11 @@ const authorize = async (req, res) => {
     //   config.serverSideRedirect === 'true'
     // ) {
     // sleep 5s
-    await new Promise((r) => setTimeout(r, 3000));
+    await new Promise((r) => setTimeout(r, 1000));
 
-    logger.debug('Starting Unifi Logout Attempt');
-    await unifiController.logout(unifiApiClient);
-    logger.debug(`Redirecting to ${process.env.REDIRECTURL}`);
+    // logger.debug('Starting Unifi Logout Attempt');
+    // await unifiController.logout(unifiApiClient);
+    // logger.debug(`Redirecting to ${process.env.REDIRECTURL}`);
 
     return successResponse(res, 201, 'User registered successfully');
 
