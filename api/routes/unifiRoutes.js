@@ -3,7 +3,8 @@ const userController = require('../controllers/userController');
 
 const router = express.Router();
 
-router.get('/', userController.fetchExternalData);
+router.get('/', (req, res) => res.json({ message: 'ok' }));
+
 router.post('/authorize', userController.registerUser);
 
 module.exports = router;

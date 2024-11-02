@@ -20,11 +20,6 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(rateLimiter);
 
-
-app.get('/', (req, res) => {
-    res.json({ message: 'ok' });
-});
-
 // Rutas
 app.use('/api', routes);
 
@@ -34,9 +29,9 @@ app.use(errorHandler);
 // Listen (solo para desarrollo local)
 const PORT = process.env.PORT || 3000;
 if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, () => {
-        logger.info(`Server running on http://localhost:${PORT}`);
-    });
+  app.listen(PORT, () => {
+    logger.info(`Server running on http://localhost:${PORT}`);
+  });
 }
 
 module.exports = app;
