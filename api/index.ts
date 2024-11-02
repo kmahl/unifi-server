@@ -1,8 +1,9 @@
 require('dotenv').config();
+import { Request, Response } from 'express';
 
 const express = require('express');
 const app = express();
-const { sql } = require('@vercel/postgres');
+// const { sql } = require('@vercel/postgres');
 
 const bodyParser = require('body-parser');
 const path = require('path');
@@ -12,7 +13,7 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 // app.use(express.static('public'));
 
-app.get('/', function (req, res) {
+app.get('/', function (req: Request, res: Response ): Response {
     return res.status(200).json({ success: true, message: "ok" });
 });
 
