@@ -47,13 +47,13 @@ const unifiController = {
         unifiApiClient,
         req,
     ) => {
-        console.log(req.body)
+        console.log("REQUEST BODY" ,req.body);
         const authorizeResponse = await unifiApiClient.post(
             `/proxy/network/api/s/${process.env.SITE_DEFAULT}/cmd/stamgr`,
             JSON.stringify({
                 cmd: 'authorize-guest',
                 mac: req.body.mac,
-                // ap_mac: req.body.ap,
+                ap_mac: req.body.ap,
             }),
         );
         if (authorizeResponse.data.meta.rc === 'ok') {
