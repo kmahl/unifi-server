@@ -5,6 +5,8 @@ const unifiController = require('../services/unifi');
 
 const authorize = async (req, res) => {
   try {
+    console.log("body", req.body)
+    console.log("headers", req.headers)
 
     const unifiApiClient = createAxiosInstance();
     logger.info('Starting Unifi Login Attempt');
