@@ -35,10 +35,9 @@ const authorize = async (req, res) => {
     // await unifiController.logout(unifiApiClient);
     // logger.debug(`Redirecting to ${process.env.REDIRECTURL}`);
 
-    return successResponse(res, 201, 'User registered successfully');
+    return successResponse(res, 201,'authorize', 'User registered successfully');
 
   } catch (err) {
-    console.log(err)
     res.status(500).json({
       err: {
         message: 'An Error has occurred. Please try again.',
