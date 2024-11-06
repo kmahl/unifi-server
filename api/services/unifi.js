@@ -47,7 +47,7 @@ const unifiController = {
         unifiApiClient,
         req,
     ) => {
-        console.log("REQUEST BODY" ,req.body);
+        console.log("REQUEST BODY", req.body);
         const authorizeResponse = await unifiApiClient.post(
             `/proxy/network/api/s/${process.env.SITE_DEFAULT}/cmd/stamgr`,
             JSON.stringify({
