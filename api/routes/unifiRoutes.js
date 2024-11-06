@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.get('/', (req, res) => res.json({ message: 'ok' }));
 
-router.post('/authorize', commandValidator, authorize);
+router.post('/authorize', authorize);
 
 module.exports = router;
