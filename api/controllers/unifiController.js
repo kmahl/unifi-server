@@ -29,7 +29,7 @@ const authorize = async (req, res) => {
     //   config.serverSideRedirect === 'true'
     // ) {
     // sleep 5s
-    await new Promise((r) => setTimeout(r, 1000));
+    // await new Promise((r) => setTimeout(r, 1000));
 
     // logger.debug('Starting Unifi Logout Attempt');
     // await unifiController.logout(unifiApiClient);

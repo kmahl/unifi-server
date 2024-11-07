@@ -6,8 +6,8 @@ const successResponse = (res, statusCode, serviceName, message, data = {})  => {
   return res.status(statusCode).json({ success: true, message, data });
 };
 
-const errorResponse = (res, statusCode, serviceName, message)  => {
-  logger.error(`${serviceName} error with statusCode: ${statusCode} and message: ${message}`);
+const errorResponse = (err, res, statusCode, serviceName, message)  => {
+  logger.error(`${serviceName} error with statusCode: ${statusCode} and message: ${err?.message || message}`);
   return res.status(statusCode).json({ success: false, message });
 };
 
