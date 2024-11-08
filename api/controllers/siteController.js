@@ -30,9 +30,30 @@ const info = async (req, res) => {
           type: "radiobutton",
           options: ["si", "no"],
           required: true
+        },
+        {
+          name: "pruebaradiobutton",
+          label: "prueba radiobutton",
+          type: "radiobutton",
+          options: ["si", "no"],
+          required: true
+        },
+        {
+          name: "pruebaradiobutton",
+          label: "prueba radiobutton",
+          type: "radiobutton",
+          options: ["si", "no"],
+          required: true
+        },
+        {
+          name: "pruebaradiobutton",
+          label: "prueba radiobutton",
+          type: "radiobutton",
+          options: ["si", "no"],
+          required: true
         }
       ],
-      staticFields: ["email", "name"]
+      staticFields: ["email", "name", "phone"]
     }
 
 
