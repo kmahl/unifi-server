@@ -22,7 +22,7 @@ app.use(cors({
     if (!origin || allowedDomains.includes(origin)) {
       callback(null, true); // Permitir el acceso
     } else {
-      callback(new Error('No permitido por CORS')); // Denegar el acceso
+      callback(new Error(`No permitido por CORS NAS ${origin}`)); // Denegar el acceso
     }
   },
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos HTTP permitidos
