@@ -14,7 +14,7 @@ const app = express();
 // Middlewares globales
 app.use(helmet());
 //app.use(cors());
-const allowedDomains = ['http://localhost:3000', 'https://netconnow.com'];
+const allowedDomains = ['http://localhost:3000', 'https://netconnow.com', 'https://www.netconnow.com/'];
 
 app.use(cors({
   origin: (origin, callback) => {
