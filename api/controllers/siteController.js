@@ -11,7 +11,7 @@ const info = async (req, res) => {
       title: 'Bienvenido a',
       subtitle: 'Legoland',
       site: 'default',
-      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg',
+      logoUrl: 'https://cdn.worldvectorlogo.com/logos/lego-2.svg',
       backgroundColor: '#e3000b',
       textColor: '#fff',
       button: {
