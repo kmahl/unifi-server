@@ -14,6 +14,7 @@ const info = async (req, res) => {
       logoUrl: 'https://cdn.worldvectorlogo.com/logos/lego-2.svg',
       backgroundColor: '#e3000b',
       textColor: '#fff',
+      
       button: {
         textColor: '#fff',
         backgroundColor: '#000'
@@ -29,25 +30,25 @@ const info = async (req, res) => {
           name: "coso1",
           label: "opcion dinamica loca",
           type: "input",
-          required: true
+          required: false
         },
         {
           name: "coso2",
           label: "opcion dinamica loca",
           type: "input",
-          required: true
+          required: false
         },
         {
           name: "coso3",
           label: "opcion dinamica loca",
           type: "input",
-          required: true
+          required: false
         },
         {
           name: "coso4",
           label: "opcion dinamica loca",
           type: "input",
-          required: true
+          required: false
         },
         {
           name: "selectorloco",
@@ -58,7 +59,10 @@ const info = async (req, res) => {
         },
 
       ],
-      staticFields: ["email", "name"]
+      staticFields: ["email", "name"],
+      legal: {
+        tyc: 'Aquí va una descripción larga para los términos y condiciones. Puede hacer scroll si es necesario.'
+      }
     }
 
 
