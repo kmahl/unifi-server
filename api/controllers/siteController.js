@@ -13,7 +13,11 @@ const info = async (req, res) => {
       site: 'default',
       logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg',
       backgroundColor: '#e3000b',
-      
+      textColor: '#fff',
+      button: {
+        textColor: '#fff',
+        backgroundColor: '#000'
+      },
       form: [
         {
           name: "coso",
