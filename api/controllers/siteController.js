@@ -9,7 +9,7 @@ const info = async (req, res) => {
     const mockedInfo = {
       name: 'mockedName',
       title: 'Bienvenido a',
-      description: 'Legoland',
+      subtitle: 'Legoland',
       site: 'default',
       logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg',
       backgroundColor: '#e3000b',
