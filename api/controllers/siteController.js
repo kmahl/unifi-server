@@ -26,19 +26,37 @@ const info = async (req, res) => {
           required: true
         },
         {
+          name: "coso1",
+          label: "opcion dinamica loca",
+          type: "input",
+          required: true
+        },
+        {
+          name: "coso2",
+          label: "opcion dinamica loca",
+          type: "input",
+          required: true
+        },
+        {
+          name: "coso3",
+          label: "opcion dinamica loca",
+          type: "input",
+          required: true
+        },
+        {
+          name: "coso4",
+          label: "opcion dinamica loca",
+          type: "input",
+          required: true
+        },
+        {
           name: "selectorloco",
           label: "prueba de selector",
           type: "selector",
           options: ["primero", "segundo", "etc"],
           required: false
         },
-        {
-          name: "pruebaradiobutton",
-          label: "prueba radiobutton",
-          type: "radiobutton",
-          options: ["si", "no"],
-          required: true
-        }
+
       ],
       staticFields: ["email", "name"]
     }
