@@ -13,22 +13,22 @@ const app = express();
 
 // Middlewares globales
 app.use(helmet());
-//app.use(cors());
+app.use(cors());
 const allowedDomains = ['http://localhost:3000', 'https://netconnow.com', 'https://www.netconnow.com'];
 
-app.use(cors({
-  origin: (origin, callback) => {
-    // Si no hay origen en la solicitud o el origen está en la lista permitida
-    if (!origin || allowedDomains.includes(origin)) {
-      callback(null, true); // Permitir el acceso
-    } else {
-      callback(new Error(`No permitido por CORS NAS ${origin}`)); // Denegar el acceso
-    }
-  },
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos HTTP permitidos
-  allowedHeaders: ['Content-Type', 'Authorization'], // Headers permitidos
-  credentials: true // Permitir cookies o autenticación
-}));
+// app.use(cors({
+//   origin: (origin, callback) => {
+//     // Si no hay origen en la solicitud o el origen está en la lista permitida
+//     if (!origin || allowedDomains.includes(origin)) {
+//       callback(null, true); // Permitir el acceso
+//     } else {
+//       callback(new Error(`No permitido por CORS NAS ${origin}`)); // Denegar el acceso
+//     }
+//   },
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos HTTP permitidos
+//   allowedHeaders: ['Content-Type', 'Authorization'], // Headers permitidos
+//   credentials: true // Permitir cookies o autenticación
+// }));
 
 app.use(express.json());
 app.use(cookieParser());
