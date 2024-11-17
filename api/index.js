@@ -42,10 +42,10 @@ app.use(errorHandler);
 
 // Listen (solo para desarrollo local)
 const PORT = process.env.PORT || 3000;
-if (process.env.NODE_ENV !== 'production') {
+// if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
     logger.info(`Server running on http://localhost:${PORT}`);
   });
-}
+// }
 
 module.exports = app;
